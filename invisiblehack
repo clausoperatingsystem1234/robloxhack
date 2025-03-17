@@ -1,0 +1,8 @@
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+for _, part in pairs(character:GetChildren()) do
+  if part:IsA("BasePart") then
+      part.Transparency = 1
+  end
+end
