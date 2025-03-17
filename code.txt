@@ -1,0 +1,6 @@
+local player = game:GetService("Players").LocalPlayer
+if player and player.Character and player.Character:FindFirstChild("Humanoid") then
+    player.Character.Humanoid.WalkSpeed = 100  -- Set super speed
+    print("Speed hack activated!")
+end
+
