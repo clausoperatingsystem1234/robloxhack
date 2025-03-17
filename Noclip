@@ -1,0 +1,13 @@
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local function toggleNoClip(state)
+  for _, part in pairs(character:GetChildren()) do
+    if part:IsA("BasePart") then
+        part.Transparency = 1
+    end
+  end
+end  
+
+RunService.Stepped:Connect(function()
+  toggleNoClip(true)
+end)
